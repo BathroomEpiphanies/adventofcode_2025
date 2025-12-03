@@ -1,6 +1,7 @@
+from io import TextIOWrapper
 
 
-def parse_input(file_handle) -> list[int]:
+def parse_input(file_handle:TextIOWrapper) -> list[int]:
     return [-int(l[1:]) if l[0]=='L' else int(l[1:]) for l in file_handle.readlines()]
 
 
